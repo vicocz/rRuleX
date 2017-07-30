@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constraints\DayOfYearConstraintTests.cs" />
+    <Compile Include="Constraints\MonthConstraintTests.cs" />
+    <Compile Include="Constraints\DayOfMonthConstraintTests.cs" />
+    <Compile Include="DataTypes\DefaultDataTypesTests.cs" />
+    <Compile Include="DataTypes\NumericIntervalDataTypeTests.cs" />
+    <Compile Include="DataTypes\NumericDataTypeTestBase.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Frequencies\YearlyRecurrenceFrequencyTests.cs" />
     <Compile Include="Frequencies\MonthlyRecurrenceFrequencyTests.cs" />
@@ -53,6 +59,7 @@
     <Compile Include="Frequencies\DailyRecurrenceFrequencyTests.cs" />
     <Compile Include="Frequencies\FrequencyTestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TempEvalTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -6,7 +6,7 @@ namespace Vico.rRule
     /// Defines frequency pattern of recurrence 
     /// </summary>
     /// <remarks>Implementation is expected to be immutable.</remarks>
-    public interface IRecurrenceFrequency : IImutable
+    public interface IRecurrenceFrequency : IImmutable
     {
         /// <summary>
         /// Get unique pattern name

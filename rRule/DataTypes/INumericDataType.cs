@@ -1,7 +1,7 @@
 ﻿namespace Vico.rRule.DataTypes
 {
     /// <summary>
-    /// Represents numeric datatype including minimum and maximum allowed values
+    /// Represents numeric data type having definition of minimum and maximum allowed values
     /// </summary>
     public interface INumericDataType : IDataType
     {
@@ -16,8 +16,10 @@
         int MaximumValue { get; }
 
         /// <summary>
-        /// Gets value
+        /// Validate the specified value and if not valid throw exception
         /// </summary>
-        int Value { get; }
+        /// <param name="value">Numeric value to be validated</param>
+        /// <returns>Input value if valid</returns>
+        int Validate(int value);
     }
 }

@@ -5,3 +5,8 @@
 /packages/NUnit.3.7.1
 /rRule/obj/Debug
 /rRule/obj/Debug
+/.vs
+/rRule.Tests/obj
+/rRule/bin/Debug
+/rRule/obj/Release
+/rRule.Tests/bin/Debug

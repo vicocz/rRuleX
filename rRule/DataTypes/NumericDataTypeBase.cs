@@ -6,9 +6,9 @@ namespace Vico.rRule.DataTypes
     {
         public Type DataType => typeof(int);
 
-        protected bool IsValid(int value)
+        protected static bool IsValid(int value, int minValue, int maxValue)
         {
-            return value != int.MinValue && value != int.MaxValue;
+            return value >= minValue && value <= maxValue;
         }
     }
 }

@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,6 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constraints\ConstraintBase.cs" />
+    <Compile Include="Constraints\ConstraintConst.cs" />
+    <Compile Include="Constraints\WeekOfYearConstraint.cs" />
+    <Compile Include="Constraints\DayOfYearConstraint.cs" />
+    <Compile Include="Constraints\DayOfMonthConstraint.cs" />
+    <Compile Include="Constraints\MonthConstraint.cs" />
+    <Compile Include="Constraints\NumericConstraintValue.cs" />
+    <Compile Include="DataTypes\DefaultDataTypes.cs" />
+    <Compile Include="DataTypes\IDataType.cs" />
+    <Compile Include="DataTypes\INumericDataType.cs" />
+    <Compile Include="DataTypes\InvalidNumericValueException.cs" />
+    <Compile Include="DataTypes\NumericIntervalDataType.cs" />
+    <Compile Include="DataTypes\NumericDataTypeBase.cs" />
     <Compile Include="Frequencies\DailyRecurrenceFrequency.cs" />
     <Compile Include="Frequencies\FrequencyConsts.cs" />
     <Compile Include="Frequencies\HourlyRecurrenceFrequency.cs" />
@@ -49,14 +63,14 @@
     <Compile Include="Frequencies\SecondlyRecurrenceFrequency.cs" />
     <Compile Include="Frequencies\WeeklyRecurrenceFrequency.cs" />
     <Compile Include="Frequencies\YearlyRecurrenceFrequency.cs" />
+    <Compile Include="IConstraintValue.cs" />
+    <Compile Include="IImmutable.cs" />
+    <Compile Include="INumericConstraintValue.cs" />
     <Compile Include="IRecurrenceConstraint.cs" />
     <Compile Include="IRecurrenceFrequency.cs" />
     <Compile Include="ITaggable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Constraints\" />
-    <Folder Include="DataTypes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
