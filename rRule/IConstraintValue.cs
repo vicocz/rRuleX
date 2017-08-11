@@ -2,7 +2,7 @@
 
 namespace Vico.rRule
 {
-    public interface IConstraintValue<T> where T : IDataType
+    public interface IConstraintValue<out T> where T : IDataType
     {
         T DataType { get; }
     }

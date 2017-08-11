@@ -43,6 +43,10 @@
   <ItemGroup>
     <Compile Include="Constraints\ConstraintBase.cs" />
     <Compile Include="Constraints\ConstraintConst.cs" />
+    <Compile Include="Constraints\DayOfWeekConstraint.cs" />
+    <Compile Include="Constraints\EnumConstraintValue.cs" />
+    <Compile Include="Constraints\StringConstraintValue.cs" />
+    <Compile Include="Constraints\WeekDaysExtensions.cs" />
     <Compile Include="Constraints\WeekOfYearConstraint.cs" />
     <Compile Include="Constraints\DayOfYearConstraint.cs" />
     <Compile Include="Constraints\DayOfMonthConstraint.cs" />
@@ -50,8 +54,13 @@
     <Compile Include="Constraints\NumericConstraintValue.cs" />
     <Compile Include="DataTypes\DefaultDataTypes.cs" />
     <Compile Include="DataTypes\IDataType.cs" />
+    <Compile Include="DataTypes\EnumDataType.cs" />
+    <Compile Include="DataTypes\IEnumDataType.cs" />
+    <Compile Include="DataTypes\InvalidDataTypeException.cs" />
+    <Compile Include="DataTypes\IStringDataType.cs" />
     <Compile Include="DataTypes\INumericDataType.cs" />
     <Compile Include="DataTypes\InvalidNumericValueException.cs" />
+    <Compile Include="DataTypes\StringDataType.cs" />
     <Compile Include="DataTypes\NumericIntervalDataType.cs" />
     <Compile Include="DataTypes\NumericDataTypeBase.cs" />
     <Compile Include="Frequencies\DailyRecurrenceFrequency.cs" />
@@ -65,6 +74,8 @@
     <Compile Include="Frequencies\YearlyRecurrenceFrequency.cs" />
     <Compile Include="IConstraintValue.cs" />
     <Compile Include="IImmutable.cs" />
+    <Compile Include="IEnumConstraintValue.cs" />
+    <Compile Include="IStringConstraint.cs" />
     <Compile Include="INumericConstraintValue.cs" />
     <Compile Include="IRecurrenceConstraint.cs" />
     <Compile Include="IRecurrenceFrequency.cs" />

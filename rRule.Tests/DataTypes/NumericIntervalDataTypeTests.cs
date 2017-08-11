@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 using Vico.rRule.DataTypes;
 
 namespace Vico.rRule.Tests.DataTypes
@@ -18,6 +19,20 @@ namespace Vico.rRule.Tests.DataTypes
         public void MinMaxValues(int expectedMinValue, int expectedMaxValue)
         {
             AssertMinMaxValues(expectedMinValue, expectedMaxValue);
+        }
+
+        [TestCase(3, 1)]
+        public void Constructor_MinIsGreter_ExceptionIsThrown(int minValue, int maxValue)
+        {
+            Assert.Throws<ArgumentException>(() => new NumericIntervalDataType(minValue, maxValue));
+        }
+
+        [Test]
+        public void DataType()
+        {
+            var numericDataType = CreateInstance();
+
+            Assert.AreEqual(typeof(int), numericDataType.DataType);
         }
     }
 }

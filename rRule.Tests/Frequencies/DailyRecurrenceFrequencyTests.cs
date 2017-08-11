@@ -12,6 +12,13 @@ namespace Vico.rRule.Tests.Frequencies
             return new DailyRecurrenceFrequency();
         }
 
+        [TestCase("DAILY")]
+        public void TagName(string expectedTag)
+        {
+            var frequency = CreateInstance();
+
+            Assert.AreEqual("FREQ", frequency.TagName);
+        }
 
         [TestCase("DAILY")]
         public void PatternName(string expectedName)

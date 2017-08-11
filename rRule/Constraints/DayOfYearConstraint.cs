@@ -9,11 +9,11 @@ namespace Vico.rRule.Constraints
         public const int LeapYearDays = 366;
         private const int NoLeapYearDays = 365;
 
-        public DayOfYearConstraint(INumericConstraintValue allowedMonth) : base(allowedMonth)
+        public DayOfYearConstraint(INumericConstraintValue allowedDays) : base(allowedDays)
         {
         }
 
-        public DayOfYearConstraint(IList<INumericConstraintValue> allowedMonths) : base(allowedMonths)
+        public DayOfYearConstraint(IList<INumericConstraintValue> allowedDays) : base(allowedDays)
         {
         }
 

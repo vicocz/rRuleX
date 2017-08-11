@@ -4,7 +4,7 @@ using Vico.rRule.DataTypes;
 
 namespace Vico.rRule.Constraints
 {
-    public abstract class ConstraintBase<T> where T : INumericConstraintValue
+    public abstract class ConstraintBase<T> where T : IConstraintValue<IDataType>
     {
         protected readonly IList<T> AllowedValues;
 

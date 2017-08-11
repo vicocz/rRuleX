@@ -15,13 +15,22 @@ namespace Vico.rRule.Tests.Constraints
         public void Filter(int value, bool expectedResult)
         {
             var contraintValue = new NumericConstraintValue(value, DefaultDataTypes.DayOfYearDataType);
-            var constraint = new DayOfYearConstraint(contraintValue);
+            var constraint = new DayOfYearConstraint(new INumericConstraintValue[] { contraintValue });
 
             var testDate = new DateTime(2016, 2, 29);
 
             bool result = constraint.Filter(testDate);
 
             Assert.AreEqual(expectedResult, result);
+        }
+
+        [Test]
+        public void TagName()
+        {
+            var contraintValue = new NumericConstraintValue(1, DefaultDataTypes.DayOfMonthDataType);
+            var constraint = new DayOfYearConstraint(contraintValue);
+
+            Assert.AreEqual("BYYEARDAY", constraint.TagName);
         }
     }
 }

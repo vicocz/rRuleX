@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Vico.rRule.DataTypes
 {
+    [Serializable]
     public class InvalidNumericValueException : ArgumentException
     {
         private const string DefaultMessage = "Passed numeric value does not meet value requirements.";

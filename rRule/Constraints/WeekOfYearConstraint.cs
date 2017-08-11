@@ -14,7 +14,7 @@ namespace Vico.rRule.Constraints
         {
         }
 
-        public string TagName => ConstraintConst.ByweekNumberTag;
+        public string TagName => ConstraintConst.ByWeekNumberTag;
 
         public int Priority => ConstraintConst.UnknownPriority;
 

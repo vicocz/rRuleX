@@ -1,4 +1,5 @@
-﻿using Vico.rRule.Constraints;
+﻿using System;
+using Vico.rRule.Constraints;
 
 namespace Vico.rRule.DataTypes
 {
@@ -19,6 +20,9 @@ namespace Vico.rRule.DataTypes
         private const int FirstDayInMonth = 1;
         private const int LastDayInMonth = 31;
 
+        private const int FirstDayInWeek = 0;
+        private const int LastDayInWeek = 6;
+
         private const int FirstWeekInYear = 1;
         private const int LastWeekInYear = 53;
 
@@ -27,6 +31,8 @@ namespace Vico.rRule.DataTypes
         public static readonly INumericDataType HoursDataType = new NumericIntervalDataType(FirstHour, LastHour);
 
         public static readonly INumericDataType MonthDataType = new NumericIntervalDataType(FirstMonth, LastMonth);
+
+        public static readonly IEnumDataType<DayOfWeek> DayOfWeekDataType = new EnumDataType<DayOfWeek>();
 
         /// <summary>
         /// Valid values are 1 to 31 or -31 to -1
@@ -37,7 +43,7 @@ namespace Vico.rRule.DataTypes
 
         public static readonly INumericDataType WeekOfYearDataType = new NumericIntervalDataType(-LastWeekInYear, LastWeekInYear);
 
-
+        public static readonly IStringDataType StringDataType = new StringDataType();
 
 
     }

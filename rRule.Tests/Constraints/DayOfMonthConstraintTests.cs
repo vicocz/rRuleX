@@ -23,5 +23,14 @@ namespace Vico.rRule.Tests.Constraints
 
             Assert.AreEqual(expectedResult, result);
         }
+
+        [Test]
+        public void TagName()
+        {
+            var contraintValue = new NumericConstraintValue(1, DefaultDataTypes.DayOfMonthDataType);
+            var constraint = new DayOfMonthConstraint(contraintValue);
+
+            Assert.AreEqual("BYMONTHDAY", constraint.TagName);
+        }
     }
 }
