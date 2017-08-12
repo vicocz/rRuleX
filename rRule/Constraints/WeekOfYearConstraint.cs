@@ -24,7 +24,7 @@ namespace Vico.rRule.Constraints
 
         public string TagName => ConstraintConst.ByWeekNumberTag;
 
-        public int Priority => ConstraintConst.UnknownPriority;
+        public int Priority => ConstraintConst.ByWeekNoPriority;
 
         public ICollection<INumericConstraintValue> AllowedWeeks => AllowedValues;
 

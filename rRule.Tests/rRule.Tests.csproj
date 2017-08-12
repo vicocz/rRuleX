@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constraints\ConstraintPriorityComparerTests.cs" />
     <Compile Include="Constraints\WeekDaysExtensionsTests.cs" />
     <Compile Include="Constraints\WeekOfYearConstraintTests.cs" />
     <Compile Include="Constraints\EnumConstraintValueTests.cs" />

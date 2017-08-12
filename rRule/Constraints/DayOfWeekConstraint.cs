@@ -22,7 +22,7 @@ namespace Vico.rRule.Constraints
 
         public string TagName => ConstraintConst.ByDayTag;
 
-        public int Priority => ConstraintConst.UnknownPriority;
+        public int Priority => ConstraintConst.ByDayPriority;
 
         public ICollection<IEnumConstraintValue<DayOfWeek>> AllowedWeekDays { get; }
 

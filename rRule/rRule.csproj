@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Constraints\ConstraintBase.cs" />
     <Compile Include="Constraints\ConstraintConst.cs" />
+    <Compile Include="Constraints\ConstraintPriorityComparer.cs" />
     <Compile Include="Constraints\DayOfWeekConstraint.cs" />
     <Compile Include="Constraints\EnumConstraintValue.cs" />
     <Compile Include="Constraints\StringConstraintValue.cs" />
