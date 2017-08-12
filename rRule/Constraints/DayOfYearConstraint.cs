@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Vico.rRule.Extensions;
 
 namespace Vico.rRule.Constraints
 {
     public class DayOfYearConstraint : ConstraintBase<INumericConstraintValue>, IRecurrenceConstraint, IImmutable
     {
-        public const int LeapYearDays = 366;
-        private const int NoLeapYearDays = 365;
-
         public DayOfYearConstraint(INumericConstraintValue allowedDays) : base(allowedDays)
         {
         }
@@ -34,14 +32,9 @@ namespace Vico.rRule.Constraints
             // if positive, just check if day of year is equal, otherwise count from end of year
             int dayOfYear = yearDay.Value >= 0
                 ? yearDay.Value
-                : yearDay.Value + DaysInYear(testDate) + 1;
+                : yearDay.Value + testDate.DaysInYear() + 1;
 
             return testDate.DayOfYear == dayOfYear;
-        }
-
-        internal static int DaysInYear(DateTime date)
-        {
-            return DateTime.IsLeapYear(date.Year) ? LeapYearDays : NoLeapYearDays;
         }
     }
 }

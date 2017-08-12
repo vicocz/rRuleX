@@ -26,6 +26,8 @@ namespace Vico.rRule.DataTypes
         private const int FirstWeekInYear = 1;
         private const int LastWeekInYear = 53;
 
+        public const int LeapYearDays = 366;
+
         public static readonly INumericDataType SecondsDataType = new NumericIntervalDataType(FirstSecond, LastSecond);
         public static readonly INumericDataType MinutesDataType = new NumericIntervalDataType(FirstMinute, LastMinute);
         public static readonly INumericDataType HoursDataType = new NumericIntervalDataType(FirstHour, LastHour);
@@ -39,7 +41,7 @@ namespace Vico.rRule.DataTypes
         /// </summary>
         public static readonly INumericDataType DayOfMonthDataType = new NumericIntervalDataType(-LastDayInMonth, LastDayInMonth);
 
-        public static readonly INumericDataType DayOfYearDataType = new NumericIntervalDataType(-DayOfYearConstraint.LeapYearDays, DayOfYearConstraint.LeapYearDays);
+        public static readonly INumericDataType DayOfYearDataType = new NumericIntervalDataType(-LeapYearDays, LeapYearDays);
 
         public static readonly INumericDataType WeekOfYearDataType = new NumericIntervalDataType(-LastWeekInYear, LastWeekInYear);
 

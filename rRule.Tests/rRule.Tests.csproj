@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constraints\WeekDaysExtensionsTests.cs" />
+    <Compile Include="Constraints\WeekOfYearConstraintTests.cs" />
     <Compile Include="Constraints\EnumConstraintValueTests.cs" />
     <Compile Include="Constraints\StringConstraintValueTests.cs" />
     <Compile Include="Constraints\DayOfWeekConstraintTests.cs" />
@@ -61,7 +63,7 @@
     <Compile Include="DataTypes\StringDataTypeTests.cs" />
     <Compile Include="DataTypes\NumericIntervalDataTypeTests.cs" />
     <Compile Include="DataTypes\NumericDataTypeTestBase.cs" />
-    <Compile Include="Extensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensionsTests.cs" />
     <Compile Include="Frequencies\YearlyRecurrenceFrequencyTests.cs" />
     <Compile Include="Frequencies\MonthlyRecurrenceFrequencyTests.cs" />
     <Compile Include="Frequencies\WeeklyRecurrenceFrequencyTests.cs" />

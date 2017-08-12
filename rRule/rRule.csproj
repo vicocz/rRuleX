@@ -63,6 +63,7 @@
     <Compile Include="DataTypes\StringDataType.cs" />
     <Compile Include="DataTypes\NumericIntervalDataType.cs" />
     <Compile Include="DataTypes\NumericDataTypeBase.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Frequencies\DailyRecurrenceFrequency.cs" />
     <Compile Include="Frequencies\FrequencyConsts.cs" />
     <Compile Include="Frequencies\HourlyRecurrenceFrequency.cs" />

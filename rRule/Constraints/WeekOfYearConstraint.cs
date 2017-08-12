@@ -1,9 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Vico.rRule.Extensions;
 
 namespace Vico.rRule.Constraints
 {
+    /// <summary>
+    /// Defines constraint by week of year
+    /// </summary>
+    /// <see href="https://icalendar.org/iCalendar-RFC-5545/3-3-10-recurrence-rule.html">
+    /// A week is defined as a seven day period, starting on the day of the week defined to be the week start (see WKST).
+    /// Week number one of the calendar year is the first week that contains at least four (4) days in that calendar year.
+    /// </see>
     public class WeekOfYearConstraint : ConstraintBase<INumericConstraintValue>, IRecurrenceConstraint, IImmutable
     {
         public WeekOfYearConstraint(INumericConstraintValue allowedWeek) : base(allowedWeek)
@@ -28,18 +36,14 @@ namespace Vico.rRule.Constraints
 
         private static bool IsMatch(INumericConstraintValue weekOfYear, DateTime testDate)
         {
-            // if positive, just check if month is equal, otherwise count from end of month
-            int dayOfYear = weekOfYear.Value >= 0
+            // if positive, just check if week is equal, otherwise count from end of year
+            int week = weekOfYear.Value >= 0
                 ? weekOfYear.Value
-                : weekOfYear.Value + WeeksInYear(testDate) + 1;
+                : weekOfYear.Value + testDate.LastDayInYear().WeekOfYear() + 1;
 
-            return testDate.DayOfYear / 7 == dayOfYear;
-        }
+            int testDateWeek = testDate.WeekOfYear();
 
-        private static int WeeksInYear(DateTime date)
-        {
-            var daysInYear = DayOfYearConstraint.DaysInYear(date);
-            return (daysInYear + 6) / 7;
+            return testDateWeek == week;
         }
     }
 }

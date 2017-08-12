@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
-using Vico.rRule;
+using Vico.rRule.Extensions;
 
 namespace Vico.rRule.Tests.Frequencies
 {

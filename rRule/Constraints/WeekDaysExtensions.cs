@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Vico.rRule.DataTypes;
 
 namespace Vico.rRule.Constraints
@@ -34,7 +32,7 @@ namespace Vico.rRule.Constraints
             if (dayOfWeek == "FR")
                 return DayOfWeek.Friday;
             if (dayOfWeek == "SA")
-                return DayOfWeek.Sunday;
+                return DayOfWeek.Saturday;
 
             throw new ArgumentException("Provided DayOfWeek value was not recognized.", nameof(dayOfWeek));
         }
